@@ -25,8 +25,6 @@
 
 ## **Estimation**
 
-[svg](#estimation)
-
 DAU = 100 Million
 
 Average watch time = 2 hours/user/day
@@ -34,8 +32,6 @@ Average watch time = 2 hours/user/day
 Total viewing time daily = 200 Million hours
 
 ### **Concurrent Users**
-
-[svg](#concurrent-users)
 
 Average concurrent viewers:
 
@@ -48,8 +44,6 @@ Assuming peak traffic is approximately 2× average:
 Peak concurrent viewers ≈ **16.6 Million**
 
 ### **Video Storage**
-
-[svg](#video-storage)
 
 Assume Netflix has around 20,000 movies and TV shows.
 
@@ -69,8 +63,6 @@ Additional storage can be required for replicas and different encoded formats.
 
 ### **Streaming Traffic**
 
-[svg](#streaming-traffic)
-
 Assume average streaming bitrate = 5 Mbps.
 
 Peak concurrent viewers ≈ 16.6 Million.
@@ -84,8 +76,6 @@ Peak bandwidth:
 This large amount of video traffic should be handled by a **CDN**, rather than sending videos directly from the application servers.
 
 ### **Total Storage**
-
-[svg](#total-storage)
 
 Video content ≈ 1 PB
 
