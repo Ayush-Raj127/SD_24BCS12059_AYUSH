@@ -1,10 +1,6 @@
 # Netflix System Design
 
-[svg](#netflix-system-design)
-
 ## **Functional Requirements**
-
-[svg](#functional-requirements)
 
 - User sign up / login.
 - Browse movies and TV shows.
@@ -16,8 +12,6 @@
 - Store watch history and viewing progress.
 
 ## **Non-Functional Requirements**
-
-[svg](#non-functional-requirements)
 
 - High availability (99.99%+ uptime).
 - Low video startup latency.
