@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Netflix System Design" id="0">
+    <mxGraphModel dx="1585" dy="883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;align=center" value="Netflix System Design&amp;nbsp;" vertex="1">
+          <mxGeometry height="45" width="800" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="u" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" value="User / Client" vertex="1">
+          <mxGeometry height="60" width="150" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;fontStyle=1" value="Load Balancer" vertex="1">
+          <mxGeometry height="60" width="160" x="270" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;fontStyle=1" value="API Gateway" vertex="1">
+          <mxGeometry height="60" width="160" x="490" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="us" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" value="User / Profile&#xa;Service" vertex="1">
+          <mxGeometry height="65" width="165" x="720" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" value="Content&#xa;Service" vertex="1">
+          <mxGeometry height="65" width="165" x="720" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="ss" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" value="Search&#xa;Service" vertex="1">
+          <mxGeometry height="65" width="165" x="720" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="rs" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" value="Recommendation&#xa;Service" vertex="1">
+          <mxGeometry height="65" width="165" x="720" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cache" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1" value="Cache / Redis" vertex="1">
+          <mxGeometry height="60" width="155" x="960" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1" value="Database" vertex="1">
+          <mxGeometry height="75" width="155" x="960" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1" value="CDN" vertex="1">
+          <mxGeometry height="60" width="160" x="490" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1" value="Content Storage&#xa;(Video Files)" vertex="1">
+          <mxGeometry height="60" width="180" x="720" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="u" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="lb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="lb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="gw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11" target="us" value="API requests">
+          <mxGeometry relative="1" x="-0.5845" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="cs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="ss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="rs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="us" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="cs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="ss" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="rs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="cs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11" target="cache" value="Fast data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="us" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block" target="cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="u" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11" target="cdn" value="Video request">
+          <mxGeometry relative="1" x="-0.1228" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11" target="storage" value="Fetch video">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11" target="u" value="Video stream">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="section" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;align=center" value="System Requirements &amp; Estimation" vertex="1">
+          <mxGeometry height="40" width="800" x="402.5" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="fr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacing=12" value="&lt;b&gt;Functional Requirements&lt;/b&gt;&lt;br&gt;• User signup and login&lt;br&gt;• Browse movies and TV shows&lt;br&gt;• Search for content&lt;br&gt;• Play, pause and resume videos&lt;br&gt;• Continue Watching&lt;br&gt;• Multiple user profiles&lt;br&gt;• Personalized recommendations&lt;br&gt;• Watch history and playback progress" vertex="1">
+          <mxGeometry height="270" width="470" x="50" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="nfr" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacing=12" value="&lt;b&gt;Non-Functional Requirements&lt;/b&gt;&lt;br&gt;• High availability&lt;br&gt;• Low video startup latency&lt;br&gt;• Horizontal scalability&lt;br&gt;• Fault tolerance&lt;br&gt;• Smooth video streaming&lt;br&gt;• Secure accounts and payments&lt;br&gt;• Global availability&lt;br&gt;• Eventual consistency for recommendations" vertex="1">
+          <mxGeometry height="270" width="470" x="565" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="boe" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;align=left;spacing=12" value="&lt;b&gt;Back-of-the-Envelope Estimation&lt;/b&gt;&lt;br&gt;• 100M DAU&lt;br&gt;• 2 hours viewing/user/day&lt;br&gt;• 200M viewing hours/day&lt;br&gt;• Average concurrency ≈ 8.3M viewers&lt;br&gt;• Peak concurrency ≈ 16.6M viewers (2× average)&lt;br&gt;• Average bitrate ≈ 5 Mbps/viewer&lt;br&gt;• Peak bandwidth ≈ 83 Tbps&lt;br&gt;• 20,000 titles × 10 GB ≈ 200 TB&lt;br&gt;• 5 quality/resolution versions ≈ 1 PB storage&lt;br&gt;• Video traffic is handled by the CDN" vertex="1">
+          <mxGeometry height="270" width="470" x="1080" y="555" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
